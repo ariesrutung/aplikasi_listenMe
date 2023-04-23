@@ -6,13 +6,13 @@ Aplikasi Pemutar Musik
 
 This CSS is used specifically for music applications. This CSS is a collection of CSS created to modify multiple modules at once. The use of modules and layouts that are not recommended in this CSS may causes in suboptimal results.
 
-- 1. Using a blank template
-- 2. Using layout 1
-- 3. Using the Padlock, My Account, Push Notifications, and Audio modules
-- 4. Audio source is up to you (iTunes, Podcast, Custom)
-- 5. All images that used in this CSS just for demo purpose. You must change it to your own ( you can find the image by copy the image url bellow and paste it to your browser address bar. Once it appear, you check the image n you app and replace it)
-- 6. Because this CSS using variable for app items color, you can change it. Basic knowledge about CSS will help you much.
-- 7. In the Colors menu of your editor, make sure to use the bellow color:
+- Using a blank template
+- Using layout 1
+- Using the Padlock, My Account, Push Notifications, and Audio modules
+- Audio source is up to you (iTunes, Podcast, Custom)
+- All images that used in this CSS just for demo purpose. You must change it to your own ( you can find the image by copy the image url bellow and paste it to your browser address bar. Once it appear, you check the image n you app and replace it)
+- Because this CSS using variable for app items color, you can change it. Basic knowledge about CSS will help you much.
+- In the Colors menu of your editor, make sure to use the bellow color:
 
   ```
   General, Homepage, Header:
@@ -27,4 +27,4 @@ This CSS is used specifically for music applications. This CSS is a collection o
 
   ```
 
-- 8. Note: in some case, the Colors setting will be replaced by CSS bellow
+- Note: in some case, the Colors setting will be replaced by CSS bellow
