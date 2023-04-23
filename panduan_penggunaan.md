@@ -27,4 +27,4 @@ This CSS is used specifically for music applications. This CSS is a collection o
 
   ```
 
-- Note: in some case, the Colors setting will be replaced by CSS bellow
+- Note: in some case, the Colors setting will be replaced by this CSS.
