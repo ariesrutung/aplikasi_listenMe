@@ -1,0 +1,96 @@
+/* Padlock */
+ion-view.padlock-view ion-content {
+    bottom: 0 !important;
+}
+
+.padlock-view .card {
+  	box-shadow: none;
+}
+
+.padlock-view {
+	font-family: 'Haas Grot Text R Web', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.padlock-view .card.padlock .item.item-text-wrap.item-custom h2 {
+	visibility: hidden; 
+}
+
+.padlock-view .card.padlock .item.item-text-wrap.item-custom  {
+	padding: 0;
+}
+
+.padlock-view .card.padlock [ng-if="description"]:before {
+    visibility: visible;
+    content: "ListenMe";
+    font-weight: bold;
+    font-size: 8vw !important;
+    width: 100%;
+    display: block;
+    margin: 0;
+    text-align: left;
+    color: #dfdfd8;
+    padding: 30px 0 5px 0;
+    background-color: transparent;
+    border-radius: 40px 40px 0 0;
+    font-family: 'Poppins', Helvetica, sans-serif !important;
+}
+
+
+.padlock-view .item.item-body.item-custom.text-center {
+    background-image: url(https://assets.market-storefront.envato-static.com/storefront/packs/media/images/home/audiojungle/search-header-4e4fca41b51e24da2b125b532db2e082.png) !important;
+    background-position: center;
+    height: 230px;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-color: transparent;
+    border-radius: 0 0 40px 40px;
+  	margin-bottom: 40px;
+}
+
+.padlock .item.item-body i {
+	font-size: 0px;
+}
+
+.padlock-view .icon.ion-ios-paper-outline,
+.padlock-view .icon.ion-ios-person-outline {
+	display: none;
+}
+
+.padlock-view div[ng-if="description"] {
+    display: block;
+    width: 100%;
+    padding: 0 0 30px 0;
+    font-family: "Poppins", Helvetica, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 15px;
+    color: #dfdfd8 !important;
+    font-weight: normal !important;
+}
+
+.padlock-view div[ng-click="padlockLogin()"] {
+	visibility: hidden;
+}
+
+.padlock-view div[ng-click="padlockLogin()"]:after {
+    visibility: visible;
+    content: "Get started";
+    display: flex;
+    width: 50%;
+    background-color: #dfdfd8 !important;
+    border-radius: 30px;
+    margin: 10px 10% 50px 0% !important;
+    padding: 15px 10px !important;
+    text-align: center;
+    color: #161a1e !important;
+    font-size: 16px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+}
+
+.padlock-view .item-icon-left {
+    padding: 0;
+}
+/* End Padlock */

@@ -1,0 +1,43 @@
+/* Layout */
+ion-content {
+    padding-top: 20px;
+    top: 0 !important;
+  background: rgb(19,21,25);
+  background: linear-gradient(90deg, rgba(19,21,25,1) 0%, rgba(37,50,57,1) 51%, rgba(50,51,55,1) 100%);
+}
+
+.always .layout.l1 .tabs {
+  box-shadow: none;
+  background: rgb(19,21,25);
+  background: linear-gradient(90deg, rgba(19,21,25,1) 0%, rgba(37,50,57,1) 51%, rgba(50,51,55,1) 100%);
+  padding: 0;
+  width: 80%;
+  border-radius: 30px;
+  bottom: 20px;
+  margin: 0 10% !important;
+}
+
+li.col.col-20.tab-item:hover {
+  filter: invert(1);
+  filter: brightness(0.5);
+}
+
+li.col.col-20.tab-item:nth-child(n+4) {
+  display: none !important;
+}
+
+.always .layout.l1 .tabs .tab-item {
+  position: relative;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  min-width: 33.33%;
+}
+
+.always .layout.l1 .tabs p {
+  display: none;
+}
+/* End Layout */

@@ -1,0 +1,102 @@
+/* Push Notification */
+ion-view.module-push.push-list.push-list-l1 ion-content {
+    bottom: 0 !important;
+}
+
+ion-view.module-push.push-list.push-list-l1 .list:before {
+    content: " ";
+    display: block;
+    height: 200px;
+    background-image: url(https://archive.org/download/headphone_3/headphone_3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
+ion-view.module-push.push-list.push-list-l1 .list {
+    padding: 0 5px 100px 5px;
+
+}
+
+ion-view.module-push.push-list.push-list-l1 ion-item.item-custom.item.item-avatar.item-avatar-square {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    background-image: linear-gradient(90deg, rgba(19, 21, 25, 1) 0%, rgba(37, 50, 57, 1) 51%, rgba(50, 51, 55, 1) 100%) !important;
+    background: #131519;
+    border: 2px solid #243137 !important;
+}
+
+ion-view.module-push.push-list.push-list-l1 ion-item.item-custom.item.item-avatar.item-avatar-square>img:nth-child(1) {
+    top: 35px;
+    right: 0 !important;
+    left: 85% !important;
+    border-radius: 50px !important;
+}
+
+ion-view.module-push.push-list.push-list-l1 ion-item img {
+    border-radius: 10px;
+}
+
+ion-view.module-push.push-list.push-list-l1 ion-item.item-custom.item.item-avatar.item-avatar-square>img:nth-child(1) {
+    top: 5px;
+    right: 0 !important;
+    left: 84% !important;
+    border-radius: 50px !important;
+    min-width: 55px !important;
+    min-height: 55px !important;
+}
+
+ion-view.module-push.push-list.push-list-l1 p.text-no-wrap.ng-binding {
+    color: #fff !important;
+    font-weight: normal !important;
+    margin-top: 15px;
+}
+
+ion-view.module-push.push-list.push-list-l1 h2 span.ng-binding {
+    font-size: 18px;
+    margin: 10px 0;
+    display: block;
+    color: #fff;
+}
+
+ion-view.module-push.push-list.push-list-l1 span.super-click.assertive {
+    position: absolute;
+    bottom: 15px;
+    width: 40px;
+    background-color: #253238;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-view.module-push.push-list.push-list-l1 i.icon.ion-android-delete {
+    font-size: 24px;
+}
+
+ion-view.module-push.push-list.push-list-l1 span[ng-if="item.details.date"] {
+    color: #fff;
+    font-style: italic;
+}
+
+ion-view.module-push.push-list.push-list-l1 span[ng-if="item.details.date"] i.ion-ios-calendar-outline {
+    display: none;
+}
+
+ion-view.module-push.push-list.push-list-l1 span[ng-if="hasItem(item)"] {
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin: 0 0 0 10px;
+}
+
+ion-view.module-push.push-list.push-list-l1 p.padding.text-right {
+    padding: 10px 0;
+}
+
+/* End Push Notification */
+

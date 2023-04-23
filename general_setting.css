@@ -1,0 +1,21 @@
+
+/* Home & Header*/
+ion-view[state="home"] {
+    background-image: none !important;
+    background: rgb(19,21,25);
+    background: linear-gradient(90deg, rgba(19,21,25,1) 0%, rgba(37,50,57,1) 51%, rgba(50,51,55,1) 100%) !important;
+}
+
+ion-view[state="home"] ion-content {
+    bottom: 0 !important;
+}
+
+ion-header-bar.bar-custom.bar.bar-header {
+    height: 0 !important;
+    background-color: transparent !important;
+}
+
+.bar.bar-custom .title {
+    display: none;
+}
+/* Home & Header*/

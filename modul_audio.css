@@ -1,0 +1,476 @@
+/* Modul Audio */
+ion-header-bar.bar-subheader.bar-custom.bar.bar-header {
+    top: 20px !important;
+}
+
+.button.button-custom.active.item-icon-left.ng-binding {
+    filter: brightness(0.5);
+}
+
+.button.button-custom.active.item-icon-left.ng-binding i,
+i.icon.ion-ios-musical-note,
+[ng-click="showPlaylists()"] i.icon.ion-ios-albums-outline,
+[ng-click="showPlaylistAlbums()"] i {
+    color: transparent !important;
+}
+
+.button.button-custom.active.item-icon-left.ng-binding,
+[ng-click="showAlbums()"],
+[ng-click="showPlaylists()"],
+[ng-click="showPlaylistTracks()"],
+[ng-click="showPlaylistAlbums()"] {
+    background-color: transparent !important;
+    font-size: 0 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+i.icon.ion-ios-musical-note {
+    background-image: url(https://unpkg.com/ionicons@5.5.2/dist/svg/folder-open-outline.svg);
+    background-repeat: no-repeat;
+    background-size: 26px;
+    background-position: center;
+    filter: invert(1);
+    width: 100%;
+}
+
+i.icon.ion-ios-albums-outline {
+    background-image: url(http://cdn.onlinewebfonts.com/svg/img_519009.png);
+    background-repeat: no-repeat;
+    background-size: 26px;
+    background-position: center;
+    filter: invert(1);
+    width: 100%;
+}
+
+ion-view.audio-list ion-content {
+    padding-top: 60px !important;
+    bottom: 0 !important;
+}
+
+/* Playlist dan Album */
+ion-view[state="music-playlist-list"] .list.row,
+ion-view[state="music-playlist-albums"] .row.list,
+ion-view[state="music-album-list"] .row.list {
+    width: 100% !important;
+    padding: 0;
+    margin: 30px 0;
+}
+
+ion-view[state="music-playlist-list"] .list.row:nth-last-child(1) {
+    padding-bottom: 100px;
+}
+
+ion-view[state="music-playlist-list"] .list.row .col-50,
+ion-view[state="music-playlist-albums"] .row.list .col-50.album-cover,
+ion-view[state="music-album-list"] .row.list .col-50.album-cover {
+    /*background: linear-gradient(90deg, rgb(208 208 208) 0%, rgb(157 174 183) 51%, rgb(82 106 201) 100%);*/
+    border-radius: 30px;
+    width: 48% !important;
+    max-width: 48%;
+    flex: 0 0 48%;
+    margin: 0 1%;
+    height: 240px;
+}
+
+ion-view[state="music-playlist-list"] .list.row .col-50 .item.item-custom:nth-child(1) img,
+ion-view[state="music-playlist-albums"] .row.list .item.item-image.item-custom img,
+ion-view[state="music-album-list"] .row.list .item.item-image.item-custom img {
+    border-radius: 10px !important;
+    width: 100%;
+    vertical-align: middle;
+    height: 240px;
+    object-fit: cover;
+}
+
+ion-view[state="music-playlist-list"] .list.row .col-50 .item.item-custom:nth-child(2),
+ion-view[state="music-playlist-albums"] .row.list .item.item-custom.album-legend,
+ion-view[state="music-album-list"] .row.list .item.item-custom.album-legend {
+    top: 0 !important;
+    border: 0;
+    width: 96%;
+    margin: -75px 2% 0 2% !important;
+    background: rgba( 165, 165, 165, 0.25 );
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+}
+
+ion-view[state="music-playlist-list"] .list.row .col-50 .item.item-custom:nth-child(2) p.ng-binding,
+ion-view[state="music-playlist-albums"] .row.list .item.item-custom.album-legend p:nth-child(1),
+ion-view[state="music-album-list"] .row.list .item.item-custom.album-legend p:nth-child(1) {
+    font-size: 18px;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+ion-view[state="music-playlist-list"] .list.row .col-50 .item.item-custom:nth-child(2) div[ng-switch="album.type"] p,
+ion-view[state="music-playlist-albums"] .row.list .item.item-custom.album-legend p:nth-child(2),
+ion-view[state="music-album-list"] .row.list .item.item-custom.album-legend p:nth-child(2) {
+    font-size: 12px;
+    font-weight: normal;
+    color: #fff;
+}
+
+
+ion-view[state="music-playlist-list"] .list.row .col-50 .item.item-image.item-custom,
+ion-view[state="music-playlist-albums"] .row.list .item.item-image.item-custom,
+ion-view[state="music-album-list"] .row.list .item.item-image.item-custom
+ {
+    height: 242px;
+}
+
+ion-view.audio-list .item.item-custom.text-center.ng-binding:after {
+    content: "Putar Semua";
+    font-size: 14px;
+    color: #fff;
+}
+
+ion-view.audio-list .item.item-custom.text-center.ng-binding,
+ion-view[state="music-playlist-list"] .list [ng-click="playAll()"],
+ion-view[state="music-playlist-albums"] .row.list [ng-click="playAll()"],
+ion-view[state="music-album-list"] .row.list [ng-click="playAll()"],
+ion-view[state="music-track-list"] [ng-click="play(0)"] {
+    background: #253239 !important;
+    box-shadow: none !important;
+    backdrop-filter: blur( 4px ) !important;
+    -webkit-backdrop-filter: blur( 4px ) !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    width: 98% !important;
+    margin: 20px 2% 0 1% !important;
+    font-size: 0;
+}
+
+/* Track List */
+ion-view[state="music-track-list"] .list.transparent {
+    padding-bottom: 150px;
+}
+ion-view[state="music-track-list"] .list.transparent h2.ng-binding {
+    color: #fff;
+}
+
+ion-view[state="music-track-list"] .list.transparent p.ng-binding {
+    font-style: italic;
+    color: #858585;
+}
+
+ion-view[state="music-track-list"] .list.transparent .item.item-custom.item-avatar {
+    padding: 0 20px !important;
+}
+
+ion-view[state="music-track-list"] .list.transparent .item.item-custom.item-avatar img {
+    display: none !important;
+}
+
+
+/* Album View */
+ion-view[state="music-album-view"] .item.item-custom.item-avatar {
+    padding: 10px 15px;
+}
+
+ion-view[state="music-album-view"] .item.item-custom.item-avatar img {
+    display: none;
+}
+
+ion-view[state="music-album-view"] .list.transparent .item.item-custom.item-avatar {
+    padding: 10px 15px;
+}
+
+ion-view[state="music-album-view"] .list.transparent .item.item-custom.item-avatar img {
+    display: none;
+}
+
+
+ion-view[state="music-album-view"] .list .item.item-thumbnail-left.item-custom img,
+ion-view[state="music-album-view-track"] .list .item.item-thumbnail-left.item-custom img {
+    border-radius: 5px;
+}
+
+ion-view[state="music-album-view"] h2.ng-binding,
+ion-view[state="music-album-view-track"] h2.ng-binding {
+    color: #fff !important;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+ion-view[state="music-album-view"] p.ng-binding,
+ion-view[state="music-album-view-track"] p.ng-binding {
+    color: #979797 !important;
+}
+
+ion-view[state="music-album-view"] h2.item-note.ng-binding,
+ion-view[state="music-album-view-track"] h2.item-note.ng-binding {
+    background: #313338 !important;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%) !important;
+    backdrop-filter: blur( 4px ) !important;
+    -webkit-backdrop-filter: blur( 4px ) !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    font-size: 12px;
+    padding: 10px 15px;
+}
+
+ion-view[state="music-album-view"] ion-content .scroll>.list:nth-child(1),
+ion-view[state="music-album-view-track"] ion-content .scroll>.list:nth-child(1) {
+    background-image: url(https://archive.org/download/cover_audio/cover_audio.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 70px;
+}
+
+ion-view[state="music-album-view"] ion-content,
+ion-view[state="music-album-view-track"] ion-content {
+    padding-top: 0 !important;
+}
+
+ion-view[state="music-album-view"] .item.item-thumbnail-left.item-custom p,
+ion-view[state="music-album-view-track"] .item.item-thumbnail-left.item-custom p {
+    color: #fff !important;
+}
+
+ion-view[state="music-album-view-track"] .item.item-custom.item-avatar {
+    padding: 0 15px;
+}
+
+ion-view[state="music-album-view-track"] .item.item-custom.item-avatar img {
+    display: none;
+}
+
+/* Audio Control -Mini */
+.remote-control.mini-player-audio {
+    background-color: #2d3238;
+    border-radius: 10px !important;
+    width: 100%;
+    margin: 0;
+    bottom: 0 !important;
+    /*height: 150px;*/
+    padding: 20px 0 80px 0;
+}
+
+.remote-control.mini-player-audio .mini-seekbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.remote-control.mini-player-audio .mini-seekbar .seekbar-flex {
+    order: 2;
+}
+
+.remote-control.mini-player-audio .mini-seekbar .mini-trackname {
+    order: 1;
+}
+
+.remote-control.mini-player-audio .mini-trackname span span.ng-binding {
+    white-space: normal;
+    /*animation: kedip 1s linear infinite;*/
+}
+
+.remote-control.mini-player-audio .mini-trackname span span:nth-child(3) {
+    margin: 10px 0 30px 0;
+    color: #656366;
+    font-size: 14px !important;
+    font-style: italic;
+}
+
+.remote-control.mini-player-audio .mini-trackname span span.ng-binding {
+    white-space: normal;
+    /* animation: kedip 1s linear infinite; */
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left !important;
+    display: block;
+}
+
+/* tombol playlist -daftar lagu */
+.mini-controls [ng-click="player.openPlayerModal(player.currentTab === 'cover' ? 'playlist' : 'cover')"] {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+}
+
+/* tombol matikan lagu */
+.remote-control.mini-player-audio .mini-seekbar [ng-click="player.reset()"] {
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+}
+
+
+.mini-controls,
+.seekbar-flex {
+    display: flex;
+    justify-content: center !important;
+    color: #fff;
+    align-items: center !important;
+    flex-direction: row;
+}
+
+.mini-controls button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px !important;
+}
+
+.mini-controls button:nth-child(5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px !important;
+    min-height: 90px !important;
+    max-height: 90px !important;
+    background-color: #fff !important;
+    min-width: 90px !important;
+    border-radius: 50%;
+    background: rgb(36,251,251);
+    background: linear-gradient(90deg, rgba(36,251,251,1) 0%, rgba(168,255,255,1) 100%) !important;
+}
+
+.mini-controls button:nth-child(1) {
+    order: 1;
+}
+
+.mini-controls i.icon.ion-play {
+    color: #2d3238;
+}
+
+.mini-controls i.icon.ion-ios-pause {
+    color: #fff;
+}
+
+[ng-show="player.isBuffering"] {
+    background-image: url(https://archive.org/download/loading_202110/loading.gif); /* icon loading buffering */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: transparent;
+}
+
+/* menghilangkan bebrapa button control */
+/* button acak */
+/*.mini-controls button:nth-child(1) */
+
+/* button acak */
+/*.mini-controls button:nth-child(2), */ 
+
+/* button ganti lagu ke belakang */
+/*.mini-controls button:nth-child(3)*/
+
+/* button mundur lagu */
+.mini-controls button:nth-child(4),
+
+/* button play */
+/*.mini-controls button:nth-child(5)*/
+
+/* button maju lagu */
+.mini-controls button:nth-child(6),
+
+/* button ganti lagu ke depan */
+/*.mini-controls button:nth-child(7)*/
+
+/* button playlist */
+/*.mini-controls button:nth-child(8)*/
+
+.mini-controls button:nth-child(9),
+
+/* icon keranjang */
+[ng-click="purchase()"] {
+    display: none !important;
+}
+
+.mini-controls .button i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.has-footer-fixed ion-nav-view.has-mini-player-controls.mini-audio.nav-view-l1 ion-content {
+    bottom: 0 !important;
+}
+
+ion-modal-view.audio-player.media-player.media-player-modal ion-content {
+    background-color: #323337 !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-image: linear-gradient(90deg, rgba(19, 21, 25, 1) 0%, rgba(37, 50, 57, 1) 51%, rgba(50, 51, 55, 1) 100%) !important;
+    background: #131519;
+}
+
+ion-modal-view.audio-player.media-player.media-player-modal .cover {
+    background: transparent !important;
+    background-image: url(https://archive.org/download/headphone_3/headphone_3.png) !important;
+    background-position: center top 50px !important;
+    background-repeat: no-repeat !important;
+    background-size: 54% !important;
+}
+
+/*[ng-click="player.playerModalIsOpen ? player.closePlayerModal() : player.openPlayerModal('cover')"],
+[ng-click="purchase()"],
+[ng-click="player.backward()"],
+[ng-click="player.forward()"],
+[ng-click="player.shuffle()"] {
+    display: none;
+}
+*/
+
+/* Ketika klik list dari mini control play */
+ion-modal-view.audio-player.media-player.media-player-modal ion-content ion-item {
+    background: rgb(19,21,25);
+    background: linear-gradient(90deg, rgba(19,21,25,1) 0%, rgba(37,50,57,1) 51%, rgba(50,51,55,1) 100%) !important;
+    border: 0;
+    color: #fff !important;
+    padding: 10px 15px !important;
+}
+
+ion-modal-view.audio-player.media-player.media-player-modal ion-content ion-item img.audio-playlist-cover {
+    display: none;
+}
+
+ion-modal-view.audio-player.media-player.media-player-modal ion-content ion-item b.ng-binding {
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+ion-modal-view.audio-player.media-player.media-player-modal ion-content ion-item p.album-name.ng-binding {
+    font-style: italic;
+    color: #9d9d9d;
+    font-size: 13px !important;
+}
+
+ion-modal-view.audio-player.media-player.media-player-modal ion-content ion-item .audio-playlist-duration p.ng-binding {
+    color: #b15454;
+    font-weight: bold;
+}
+
+ion-modal-view.audio-player.media-player.media-player-modal ion-content>.scroll>div[ng-if="player.currentTab == 'playlist'"]:before {
+    background-image: url(https://archive.org/download/cover_audio/cover_audio.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 150px;
+}
+
+ion-modal-view.audio-player.media-player.media-player-modal ion-content > .scroll > div[ng-if="player.currentTab == 'playlist'"] {
+    padding-bottom: 350px !important;
+}
+
+ion-modal-view.audio-player.media-player.media-player-modal .audio-playlist-item.playing {
+    filter: brightness(75%);
+    width: 96% !important;
+    border-radius: 10px !important;
+    margin: 10px 2% !important;
+}
+
+ion-view[state="music-album-list"] div[sb-albums-boxes] {
+    padding-bottom: 200px !important;
+}
+
+/* End of module audio */
